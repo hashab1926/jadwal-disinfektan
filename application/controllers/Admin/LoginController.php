@@ -6,6 +6,7 @@ class LoginController extends CI_Controller
 
 	public function index()
 	{
+		echo password_hash("123",PASSWORD_BCRYPT);
 		if($this->session->userdata("id")) redirect("admin/dashboard");		
 		$this->load->view('Pages/Admin/Login');
 	}
